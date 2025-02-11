@@ -1,1 +1,1776 @@
-Coming soon!
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.3/js/tabulator.min.js"
+            integrity="sha512-xu/xzHeJxvPLt6tuy68mvBtY4XCDpGmMe1AV4+S1viFUvy0Qygmoq1yePeDenRRNRSqYx3GvucTAnsGiO0FRaA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.3/js/jquery_wrapper.min.js"
+            integrity="sha512-Q+u5tqLUv7zbQ1QBm6Pcwc2N2PbqrRC//Ze2YGnlSe5TBbO0KrCYZ/WvgjTlNnzVtOHU9pNoztQjJxpSXa5boQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.3/css/tabulator.min.css"
+          integrity="sha512-gHU0A38WiT7Jyubh7KcU6af64wRVBnNEB1541Ue5W050dRL/f21IWkAD8sl85nVjPyLnbffiXsCborGDQ55bYQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script type="application/javascript">
+        let rewardStatistics = [
+  {
+    "count": 42,
+    "total": 3150.0,
+    "name": "Digital Download Bundle",
+    "base_price": 75.0,
+    "percentage_of_total": 30.111843991970176,
+    "sold_out_in": null
+  },
+  {
+    "count": 15,
+    "total": 1875.0,
+    "name": "P4A 2025 Merch Bundle",
+    "base_price": 125.0,
+    "percentage_of_total": 17.92371666188701,
+    "sold_out_in": null
+  },
+  {
+    "count": 23,
+    "total": 1385.0,
+    "name": null,
+    "base_price": NaN,
+    "percentage_of_total": 13.239652040913871,
+    "sold_out_in": null
+  },
+  {
+    "count": 10,
+    "total": 550.0,
+    "name": "P4A 2025 Flat Merch Bundle",
+    "base_price": 55.0,
+    "percentage_of_total": 5.257623554153523,
+    "sold_out_in": null
+  },
+  {
+    "count": 9,
+    "total": 450.0,
+    "name": "Nerdfighter Art",
+    "base_price": 50.0,
+    "percentage_of_total": 4.301691998852882,
+    "sold_out_in": null
+  },
+  {
+    "count": 9,
+    "total": 450.0,
+    "name": "Mystery P4A Perks",
+    "base_price": 50.0,
+    "percentage_of_total": 4.301691998852882,
+    "sold_out_in": null
+  },
+  {
+    "count": 11,
+    "total": 440.0,
+    "name": "P4A 2025 Commemorative Coin",
+    "base_price": 40.0,
+    "percentage_of_total": 4.206098843322819,
+    "sold_out_in": null
+  },
+  {
+    "count": 16,
+    "total": 400.0,
+    "name": "P4A 2025 Enamel Pin",
+    "base_price": 25.0,
+    "percentage_of_total": 3.8237262212025622,
+    "sold_out_in": null
+  },
+  {
+    "count": 7,
+    "total": 350.0,
+    "name": "P4A 2025 T-Shirt: XS - 5XL",
+    "base_price": 50.0,
+    "percentage_of_total": 3.345760443552242,
+    "sold_out_in": null
+  },
+  {
+    "count": 6,
+    "total": 270.0,
+    "name": "Frog Print Bundle (UNSIGNED)",
+    "base_price": 45.0,
+    "percentage_of_total": 2.581015199311729,
+    "sold_out_in": null
+  },
+  {
+    "count": 8,
+    "total": 200.0,
+    "name": "P4A 2025 Pressed Pennies",
+    "base_price": 25.0,
+    "percentage_of_total": 1.9118631106012811,
+    "sold_out_in": null
+  },
+  {
+    "count": 10,
+    "total": 150.0,
+    "name": "Exclusive Dear Hank & John",
+    "base_price": 15.0,
+    "percentage_of_total": 1.4338973329509608,
+    "sold_out_in": null
+  },
+  {
+    "count": 8,
+    "total": 120.0,
+    "name": "Three Chapters of John's New Book",
+    "base_price": 15.0,
+    "percentage_of_total": 1.1471178663607686,
+    "sold_out_in": null
+  },
+  {
+    "count": 4,
+    "total": 100.0,
+    "name": "P4A 2025 Sharpies (4-pack)",
+    "base_price": 25.0,
+    "percentage_of_total": 0.9559315553006406,
+    "sold_out_in": null
+  },
+  {
+    "count": 8,
+    "total": 96.0,
+    "name": "Crabulo.us Monthly Subscription",
+    "base_price": 12.0,
+    "percentage_of_total": 0.9176942930886148,
+    "sold_out_in": null
+  },
+  {
+    "count": 6,
+    "total": 90.0,
+    "name": "The Other Jokes! (from Hank's Comedy Special)",
+    "base_price": 15.0,
+    "percentage_of_total": 0.8603383997705765,
+    "sold_out_in": null
+  },
+  {
+    "count": 5,
+    "total": 75.0,
+    "name": "Two Chapters of Hank's New Book",
+    "base_price": 15.0,
+    "percentage_of_total": 0.7169486664754804,
+    "sold_out_in": null
+  },
+  {
+    "count": 5,
+    "total": 75.0,
+    "name": "Like Letters with John and Sarah",
+    "base_price": 15.0,
+    "percentage_of_total": 0.7169486664754804,
+    "sold_out_in": null
+  },
+  {
+    "count": 1,
+    "total": 75.0,
+    "name": "Your Name in the P4A Recap Video",
+    "base_price": 75.0,
+    "percentage_of_total": 0.7169486664754804,
+    "sold_out_in": null
+  },
+  {
+    "count": 4,
+    "total": 60.0,
+    "name": "Exclusive Hankschannel Video",
+    "base_price": 15.0,
+    "percentage_of_total": 0.5735589331803843,
+    "sold_out_in": null
+  },
+  {
+    "count": 4,
+    "total": 60.0,
+    "name": "Pressed Penny Passports",
+    "base_price": 15.0,
+    "percentage_of_total": 0.5735589331803843,
+    "sold_out_in": null
+  },
+  {
+    "count": 4,
+    "total": 40.0,
+    "name": "Hank\u2019s Cancer Cries Playlist",
+    "base_price": 10.0,
+    "percentage_of_total": 0.3823726221202562,
+    "sold_out_in": null
+  },
+  {
+    "count": 1,
+    "total": NaN,
+    "name": "(???? missing from API)",
+    "base_price": NaN,
+    "percentage_of_total": NaN,
+    "sold_out_in": "0:00:00"
+  }
+];
+        let anonymousStatistics = [
+  {
+    "count": 92,
+    "total": 8000.7,
+    "who": "Other"
+  },
+  {
+    "count": 44,
+    "total": 5237.0,
+    "who": "Anonymous"
+  }
+];
+        let decimalStatistics = [
+  {
+    "after_decimal": "00",
+    "amount": 135
+  },
+  {
+    "after_decimal": "70",
+    "amount": 1
+  }
+];
+        let decimalWarStatistics = [
+  {
+    "after_decimal": "00",
+    "minutes": 33.57,
+    "percentage_of_total": 59.35289957567185
+  },
+  {
+    "after_decimal": "70",
+    "minutes": 22.99,
+    "percentage_of_total": 40.647100424328144
+  }
+];
+        let decimalWarStreamStatistics = [
+  {
+    "after_decimal": "00",
+    "minutes": 33.57,
+    "percentage_of_total": 59.35289957567185
+  },
+  {
+    "after_decimal": "70",
+    "minutes": 22.99,
+    "percentage_of_total": 40.647100424328144
+  }
+];
+        let donationStatistics = [
+  {
+    "rewards": 1,
+    "total": 6097.0,
+    "count": 67
+  },
+  {
+    "rewards": 2,
+    "total": 2732.7,
+    "count": 25
+  },
+  {
+    "rewards": 0,
+    "total": 1385.0,
+    "count": 23
+  },
+  {
+    "rewards": 3,
+    "total": 1614.0,
+    "count": 14
+  },
+  {
+    "rewards": 5,
+    "total": 647.0,
+    "count": 3
+  },
+  {
+    "rewards": 4,
+    "total": 395.0,
+    "count": 3
+  },
+  {
+    "rewards": 6,
+    "total": 367.0,
+    "count": 1
+  }
+];
+        let rewardCombinations = [
+  {
+    "count": 3,
+    "reward_names": "Crabulo.us Monthly Subscription, Digital Download Bundle"
+  },
+  {
+    "count": 2,
+    "reward_names": "Digital Download Bundle, Nerdfighter Art"
+  },
+  {
+    "count": 2,
+    "reward_names": "Digital Download Bundle, P4A 2025 T-Shirt: XS - 5XL"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Dear Hank & John, P4A 2025 Merch Bundle"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Pressed Pennies, Pressed Penny Passports"
+  },
+  {
+    "count": 1,
+    "reward_names": "Crabulo.us Monthly Subscription, Digital Download Bundle, Nerdfighter Art"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Dear Hank & John, Exclusive Hankschannel Video, Three Chapters of John's New Book"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Commemorative Coin, P4A 2025 Enamel Pin, The Other Jokes! (from Hank's Comedy Special)"
+  },
+  {
+    "count": 1,
+    "reward_names": "Frog Print Bundle (UNSIGNED), P4A 2025 Commemorative Coin, P4A 2025 Enamel Pin, P4A 2025 Flat Merch Bundle"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Commemorative Coin, P4A 2025 Pressed Pennies"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Commemorative Coin, P4A 2025 Enamel Pin"
+  },
+  {
+    "count": 1,
+    "reward_names": "Mystery P4A Perks, P4A 2025 T-Shirt: XS - 5XL"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Pressed Pennies"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, Mystery P4A Perks, P4A 2025 Merch Bundle"
+  },
+  {
+    "count": 1,
+    "reward_names": "Like Letters with John and Sarah, Your Name in the P4A Recap Video"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Commemorative Coin, P4A 2025 Flat Merch Bundle, P4A 2025 Pressed Pennies, Pressed Penny Passports"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Dear Hank & John, Like Letters with John and Sarah"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Dear Hank & John, Exclusive Hankschannel Video, P4A 2025 Sharpies (4-pack)"
+  },
+  {
+    "count": 1,
+    "reward_names": "Frog Print Bundle (UNSIGNED), Like Letters with John and Sarah, P4A 2025 Sharpies (4-pack), Three Chapters of John's New Book"
+  },
+  {
+    "count": 1,
+    "reward_names": "Mystery P4A Perks, P4A 2025 Flat Merch Bundle"
+  },
+  {
+    "count": 1,
+    "reward_names": "Frog Print Bundle (UNSIGNED), Mystery P4A Perks, Nerdfighter Art"
+  },
+  {
+    "count": 1,
+    "reward_names": "Crabulo.us Monthly Subscription, Digital Download Bundle, Mystery P4A Perks, Nerdfighter Art, P4A 2025 Flat Merch Bundle"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Commemorative Coin"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Flat Merch Bundle, P4A 2025 T-Shirt: XS - 5XL"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, Mystery P4A Perks, Nerdfighter Art"
+  },
+  {
+    "count": 1,
+    "reward_names": "Crabulo.us Monthly Subscription, Exclusive Dear Hank & John, Mystery P4A Perks"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Enamel Pin"
+  },
+  {
+    "count": 1,
+    "reward_names": "Nerdfighter Art, P4A 2025 Enamel Pin"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Hankschannel Video, The Other Jokes! (from Hank's Comedy Special)"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Dear Hank & John, P4A 2025 Enamel Pin"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Commemorative Coin, P4A 2025 Enamel Pin, Three Chapters of John's New Book, Two Chapters of Hank's New Book"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Enamel Pin, P4A 2025 Pressed Pennies"
+  },
+  {
+    "count": 1,
+    "reward_names": "Hank\u2019s Cancer Cries Playlist, Like Letters with John and Sarah"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Merch Bundle, The Other Jokes! (from Hank's Comedy Special)"
+  },
+  {
+    "count": 1,
+    "reward_names": "Digital Download Bundle, P4A 2025 Enamel Pin, P4A 2025 Flat Merch Bundle, P4A 2025 Pressed Pennies, Pressed Penny Passports"
+  },
+  {
+    "count": 1,
+    "reward_names": "Three Chapters of John's New Book, Two Chapters of Hank's New Book"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Enamel Pin, Three Chapters of John's New Book, Two Chapters of Hank's New Book"
+  },
+  {
+    "count": 1,
+    "reward_names": "Exclusive Dear Hank & John, Exclusive Hankschannel Video, The Other Jokes! (from Hank's Comedy Special)"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Commemorative Coin, P4A 2025 T-Shirt: XS - 5XL"
+  },
+  {
+    "count": 1,
+    "reward_names": "P4A 2025 Enamel Pin, P4A 2025 Pressed Pennies, P4A 2025 T-Shirt: XS - 5XL"
+  },
+  {
+    "count": 1,
+    "reward_names": "Frog Print Bundle (UNSIGNED), Nerdfighter Art, P4A 2025 T-Shirt: XS - 5XL"
+  },
+  {
+    "count": 1,
+    "reward_names": "Crabulo.us Monthly Subscription, Digital Download Bundle, Mystery P4A Perks, Nerdfighter Art, P4A 2025 Flat Merch Bundle, P4A 2025 Merch Bundle"
+  }
+];
+        let moneyFormatterParams = {"symbol": "$"};
+
+        function percentage(cell, formatterParams, onRendered) {
+            return Math.round(cell.getValue() * 100) / 100 + " %"
+        }
+
+        $(document).ready(function () {
+            $("#reward-statistics").tabulator({
+                data: rewardStatistics,
+                layout: "fitColumns",
+                height: 800,
+                columns: [
+                    {"title": "Reward name", "field": "name"},
+                    {
+                        "title": "Base price", "field": "base_price", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 150
+                    },
+                    {"title": "Count", "field": "count", "width": 75},
+                    {
+                        "title": "Total raised (minimum)", "field": "total", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 250
+                    },
+                    {
+                        "title": "Approx percentage of total", "field": "percentage_of_total", "formatter": percentage,
+                        "width": 175
+                    },
+                    {
+                        "title": "Sold out in",
+                        "field": "sold_out_in",
+                        "width": 100
+                    }
+                ]
+            });
+            $("#donation-statistics").tabulator({
+                data: donationStatistics,
+                layout: "fitColumns",
+                columns: [
+                    {"title": "Rewards in donation", "field": "rewards"},
+                    {"title": "Count", "field": "count", "width": 75},
+                    {
+                        "title": "Raised", "field": "total", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 150
+                    },
+                ]
+            });
+            $("#reward-combinations").tabulator({
+                data: rewardCombinations,
+                layout: "fitColumns",
+                height: 500,
+                columns: [
+                    {"title": "Rewards", "field": "reward_names"},
+                    {"title": "Count", "field": "count", "width": 75},
+                ]
+            });
+            $("#decimal-statistics").tabulator({
+                data: decimalStatistics,
+                layout: "fitColumns",
+                height: 800,
+                columns: [
+                    {"title": "After decimal", "field": "after_decimal"},
+                    {"title": "Amount", "field": "amount"},
+                ]
+            });
+            $("#anonymous-statistics").tabulator({
+                data: anonymousStatistics,
+                layout: "fitColumns",
+                columns: [
+                    {"title": "Who", "field": "who"},
+                    {"title": "Count", "field": "count", "width": 100},
+                    {
+                        "title": "Total raised", "field": "total", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 200
+                    },
+                ]
+            });
+
+            let decimalWarColumns = [
+                {"title": "Total after decimal", "field": "after_decimal"},
+                {"title": "Minutes", "field": "minutes"},
+                {"title": "Percentage of total", "field": "percentage_of_total", "formatter": percentage},
+            ];
+            $("#decimal-war-statistics").tabulator({
+                data: decimalWarStatistics,
+                layout: "fitColumns",
+                columns: decimalWarColumns,
+            });
+            $("#decimal-war-stream-statistics").tabulator({
+                data: decimalWarStreamStatistics,
+                layout: "fitColumns",
+                columns: decimalWarColumns,
+            });
+        })
+
+    </script>
+
+    <title>Project for Awesome 2025</title>
+
+    <style>
+        .tab-pane {
+            margin: 10px;
+        }
+
+        footer {
+            padding: 5px;
+        }
+
+        #myTabContent {
+            margin-bottom: 35px;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="rewards-list-tab" data-bs-toggle="tab"
+                data-bs-target="#rewards-list-tab-pane"
+                type="button"
+                role="tab" aria-controls="rewards-list-tab-pane" aria-selected="true">
+            Rewards
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rewards-tab" data-bs-toggle="tab" data-bs-target="#rewards-tab-pane"
+                type="button"
+                role="tab" aria-controls="rewards-tab-pane" aria-selected="false">
+            Reward statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="donation-tab" data-bs-toggle="tab" data-bs-target="#donation-tab-pane"
+                type="button"
+                role="tab" aria-controls="donation-tab-pane" aria-selected="false">
+            Donation statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="anonymous-tab" data-bs-toggle="tab" data-bs-target="#anonymous-tab-pane"
+                type="button"
+                role="tab" aria-controls="anonymous-tab-pane" aria-selected="false">
+            Anonymous statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="decimal-stats-tab" data-bs-toggle="tab" data-bs-target="#decimal-stats-tab-pane"
+                type="button"
+                role="tab" aria-controls="decimal-stats-tab-pane" aria-selected="false">
+            Decimal value statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="decimal-war-tab" data-bs-toggle="tab" data-bs-target="#decimal-war-tab-pane"
+                type="button" role="tab" aria-controls="decimal-war-tab-pane" aria-selected="false">
+            Decimal war
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="polls-tab" data-bs-toggle="tab" data-bs-target="#polls-tab-pane"
+                type="button" role="tab" aria-controls="polls-tab-pane" aria-selected="false">
+            Polls
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="rewards-list-tab-pane" role="tabpanel" aria-labelledby="rewards-list-tab"
+         tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Rewards</h2>
+                    
+                        <p>Data last retrieved Feb. 11, 2025, 5:56 p.m. UTC</p>
+                    
+
+                    <div style="padding-bottom: 20px">
+                        <div class="btn-group">
+                            <button type="button" id="btn-reset-all" class="btn btn-success">Reset</button>
+                        </div>
+                        <div class="btn-group btn-availability">
+                            <button type="button" id="btn-availability-all" class="btn btn-primary">All</button>
+                            <button type="button" id="btn-availability-true" class="btn btn-secondary">Available
+                            </button>
+                            <button type="button" id="btn-availability-false" class="btn btn-secondary">Unavailable
+                            </button>
+                        </div>
+                        <div class="btn-group btn-limited">
+                            <button type="button" id="btn-limited-all" class="btn btn-primary">All</button>
+                            <button type="button" id="btn-limited-true" class="btn btn-secondary">Limited</button>
+                            <button type="button" id="btn-limited-false" class="btn btn-secondary">Unlimited</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" id="btn-count" class="btn btn-light">Showing 25</button>
+                        </div>
+                    </div>
+
+
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hank’s Cancer Cries Playlist <small>$10.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Sometimes when you’re doing cancer treatment you cry…sometimes when you least expect it. But sometimes it’s EXACTLY when you would expect, like when you hear a beautiful song, especially one with some meaningful connection to your past. This is a playlist of songs that made me cry during cancer treatment! Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=595b92ac-81a9-49f0-a99e-6a997029eb58" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276290/blob-36eda160-4c57-4228-93c6-0a0cbbaeea4c.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Crabulo.us Monthly Subscription <small>$12.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                For the next 12 months, receive a monthly email with an exclusive crab picture from the original Crabulous artist: Sarah Abed!
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=06754f2f-71e9-46d5-9841-a3e9deb66881" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276291/blob-a0b7d407-0580-4dff-96aa-a2b9ef197e6d.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Clowncast with Hank and Payton <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Hank and his social media manager Payton talk about the internet, standout moments from working together, and probably Taylor Swift. Edited by Payton and mixed by Josef &quot;Tuna&quot; Metesh. Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=85f215ef-042b-4035-9e6f-8232ec666add" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276294/blob-63ca82cf-b54b-4256-a7a5-ab6492be1c5b.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Exclusive Dear Hank &amp; John <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                An exclusive episode of Dear Hank &amp; John! We&#x27;ll collect questions from perk donors after P4A. Edited by Josef &quot;Tuna&quot; Metesh. Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=b9a70037-f66e-4fa8-9368-c05d20d34c11" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276296/blob-5eb3b6d8-b380-491b-b79a-3c1a713942d2.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Exclusive Delete This with Hank and Katherine <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Hank and Katherine have a podcast called “Delete This” and it is fun and silly. Join them for an episode *unstuck in time* (it is more of just a chat than interfacing with the news of the world.) Edited by Josef &quot;Tuna&quot; Metesh. Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=92136074-b165-4da6-95cf-5c8dd3320b53" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276299/blob-78448a61-ae84-4251-bbc1-3b9fee587bbc.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Exclusive Hankschannel Video <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Hankschannel videos look their own kind of way, and this one is special…a real mess…the kind of mess one wouldn’t necessarily make public to the whole world. But hopefully the kind of mess you will enjoy!! It’s…long. Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=a6e7c451-6c3c-45d9-9925-fcfece7f69c5" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276300/blob-ac83369c-df32-4cf8-ac1d-59ef7445e37d.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Like Letters with John and Sarah <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Sarah &amp; John share emails they wrote while falling in love and discuss what it all means. Edited by Josef &quot;Tuna&quot; Metesh. Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=13581fd3-98d8-4bce-a9ea-03fc2f160604" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276297/blob-434cbaca-b9d6-4050-8ca5-5d001170b162.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-limited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pressed Penny Passports <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                We&#x27;ve been smashing pennies every year of P4A, so get one of these booklets to proudly display your collection! Designed by Rachel Calderon-Navarro.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        625 / 630
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=5f7ca377-37bc-4625-97c6-b3ccd50f3899" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276293/blob-b41fed82-3761-43dd-b918-cdf03d195946.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">The Other Jokes! (from Hank&#x27;s Comedy Special) <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                50 minutes of bits, crowd work, improvisations, and outright mistakes that did not make it into Hank’s special “Pissing Out Cancer.” Mostly these were filmed while Hank was preparing or touring the special, but there is one bit that was cut from the special itself! Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=933f8e5c-74eb-4324-ad96-4e3cd5c77722" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276298/blob-b40150fa-65f5-44ce-b642-55737a737707.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Three Chapters of John&#x27;s New Book <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Read the first three chapters of an unpublished book from John, tentatively titled &quot;Hollywood Ending.&quot; It&#x27;s NOT about tuberculosis! Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=03f270fc-0e57-40b2-b06f-c5de900c47ba" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276302/blob-3914deff-e4d0-4d17-99a0-6793d7d6c135.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Two Chapters of Hank&#x27;s New Book <small>$15.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Read two chapters of Hank&#x27;s next book, tentatively titled &quot;In Defense of Cancer.&quot; Included in the Digital Download Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=6add7f38-7b93-43f1-bd15-8ee347e5f61a" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276301/blob-08105562-41d3-4fbd-ab91-fb33401766ca.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 Enamel Pin <small>$25.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Get the P4A 2025 pin and celebrate with some back-to-school vibes. Designed by Melanie Oventhal. Included in the P4A 2025 Merch Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=1aa14e18-5267-4abf-af81-25590aed4e1b" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276309/blob-09dfcb31-622a-4dac-84d2-6ac573713b4b.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 Pressed Pennies <small>$25.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                John doesn&#x27;t like pennies, so we&#x27;ve made it a tradition to SMASH THEM! You&#x27;ll get 4 new pennies, all designed by Katie Brink Ryan. Included in the P4A 2025 Merch Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=5f5579f9-b24d-4f57-9a34-8963ad8269ff" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276310/blob-75b3fe1d-10c9-4e05-94e6-dd9d60036eb8.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 Sharpies (4-pack) <small>$25.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Use these Sharpies to doodle on whatever you want (even your face) in this year&#x27;s P4A color scheme! Designed by Melanie Oventhal. Included in the P4A 2025 Merch Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=05610038-e239-4cff-bb5f-f36eeb7cf47d" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276311/blob-9206fbb1-e8ca-43ef-bb08-1a96daf76caa.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 Commemorative Coin <small>$40.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                This coin commemorates the 18th annual Project for Awesome! Complete your set... or start your collection now! Did we mention, it glows in the dark? Designed by Melanie Oventhal. Included in the P4A 2025 Merch Bundle.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=accc4422-6248-44ca-af7c-986c632f4985" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/275943/blob-e1bd5e56-0e06-495f-abc2-dfb9e482cd19.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Frog Print Bundle (UNSIGNED) <small>$45.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                All ten frogs! If you love these beautiful 4x6&quot; creations by Paige Tompkins, you can get all the frogs in one bundle. Note: These Frog Prints are UNSIGNED. Individual signed frogsonas will be released when guests join the livestream!
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=45da3dd7-7809-4b7f-a82e-f88b7f0bf4f8" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/275950/blob-86570149-df9b-42f0-ba61-8099b9e4cade.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-limited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mystery P4A Perks <small>$50.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                A random set of ~3-4 perks from past P4As that will surprise and delight you! (We can&#x27;t guarantee you&#x27;ll receive something that you don&#x27;t already have.)
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        366 / 375
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=fe21be4f-3cbb-4598-b6bc-386d27c6c2a8" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276334/blob-dc7cbf87-4fd7-4562-ad35-7c60966bebba.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-limited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nerdfighter Art <small>$50.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                An original art piece created by a Nerdfighter!
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        1390 / 1400
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=91d7d275-19de-4ac6-ad12-51984b89b25d" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/277569/blob-1c3d8aa2-c66f-4429-93a2-fc204d47d049.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 T-Shirt: XS - 5XL <small>$50.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Celebrate P4A and decreasing world suck year-round with the P4A 2025 t-shirt! Unisex sizes XS–4XL exactly as pictured; 5XL will be a slightly darker Navy color. Designed by Melanie Oventhal. Size Chart: https://bit.ly/p4a25shirt
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=6b4b591e-e1d4-4f18-8ab2-60e6883d1da7" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276335/blob-894bbaf1-6221-4936-a5f0-bbe3cc07da7b.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 Flat Merch Bundle <small>$55.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                A flat bundle full of P4A 2025 merch that you can&#x27;t get separately: bumper magnet, rubber fridge magnet, temp tattoos, and window cling. Comes with a Thank You Postcard signed by Hank Green! Perks designed by Melanie Oventhal and Katie Brink Ryan.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=0d6f0368-13f0-4fb6-b7f3-beed93816652" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276336/blob-b71feba2-426d-465c-833a-89d6b8945792.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Digital Download Bundle <small>$75.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                A bunch of podcasts, videos, digital art, and more (including some bundle-exclusives like Nerdfighter-designed knitting patterns)! No personalized, limited-quantity, or subscription perks included. NOTE: The final Market Value will be emailed out after the P4A Livestream, since more perks may be added.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=b9bfa8a1-09e3-416f-b869-fc3e8906f498" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/275957/blob-c12e99e2-8b61-4278-95e7-ee3b795d9312.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-limited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Your Name in the P4A Recap Video <small>$75.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                Every year, we edit the entire P4A livestream down to a ~10 minute recap video. Your name will be featured in it as thanks for making it possible! Edited by Josef &quot;Tuna&quot; Metesh.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        149 / 150
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=cf77956d-57f6-421e-857b-3557c8f79dc1" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276339/blob-a6062763-fb55-4261-aeb3-55096e97d849.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-unlimited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A 2025 Merch Bundle <small>$125.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                A bundle of the P4A 2025 pin, coin, pennies, T-shirt, and sharpies! Get a sweet deal AND show off your awesomeness. Comes with a Thank You Postcard signed by Hank Green! Perks designed by Melanie Oventhal and Katie Brink Ryan. For the T-shirt, unisex sizes XS–4XL exactly as pictured; 5XL will be a slightly darker Navy color. Size Chart: https://bit.ly/p4a25shirt
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        Unlimited
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=825f3467-ba0a-44b5-93ab-27fb27243db5" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276378/blob-9fca0c68-164a-46bd-8f9f-eed8aa661e16.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-limited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A Quilt by Nerdfighter Kailey <small>$1300.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                A handmade 56x74” quilt made just for this year&#x27;s P4A, featuring an earthy mix of green, yellow, black, and purple with the Project for Awesome Logo in the center! Made by Nerdfighter Kailey deWeever.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        1 / 1
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=1fc94a78-c4fe-4dfe-aba0-1af6591090da" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/276387/blob-e75ff35a-3f0a-4960-aeca-c02e8934c2b5.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div class="card card-active card-limited"
+                             style="margin-bottom: 5px">
+                            
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-8 col-xl-9 col-xxl-10">
+                                        <div class="card-body">
+                                            <h5 class="card-title">P4A Quilt by Nerdfighter Rachael <small>$1300.00</small>
+                                            </h5>
+                                            <p class="card-text">
+                                                A handmade 50x65&quot; quilt made just for this year&#x27;s P4A, with a raw edge appliqué of &quot;We&#x27;re Here Because.&quot; Fabric inspired by DFTBA&#x27;s sweet sixteen! Made by Nerdfighter Rachael McBride.
+                                            </p>
+                                            <button class="btn btn-sm btn-info">
+    
+        1 / 1
+    
+</button>
+
+
+    <a href="https://donate.tiltify.com/+p4a-producers/project-for-awesome-2025/?rewardPublicId=59a8db41-9e5b-45ac-b94d-ea4420a819cc" class="btn btn-sm btn-primary"
+       target="_blank">
+        Donate
+    </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-2 text-end">
+                                        <img src="https://assets.tiltify.com/uploads/reward/image/277570/blob-a56a04e6-6d60-468e-9dd6-a79c24db1527.png" class="img-fluid rounded-end"
+                                             style="max-height: 175px; max-width: 175px; padding: 5px"
+                                             alt="alt" title="alt">
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="rewards-tab-pane" role="tabpanel" aria-labelledby="rewards-tab"
+         tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Reward statistics</h2>
+                    
+                        <p>Data last retrieved Feb. 11, 2025, 5:56 p.m. UTC</p>
+                    
+                    <p>The "sold out in" time is approximated from first and last donation time with that reward.</p>
+                    <div style="max-width: 1500px">
+                        <table id="reward-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="donation-tab-pane" role="tabpanel" aria-labelledby="donation-tab"
+         tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Donation statistics</h2>
+                    
+                        <p>Data last retrieved Feb. 11, 2025, 5:56 p.m. UTC</p>
+                    
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <table id="donation-statistics"></table>
+                    </div>
+                    <hr>
+                    <h2>Reward combinations</h2>
+                    <div style="max-width: 1500px; margin: 0 auto;">
+                        <table id="reward-combinations"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="anonymous-tab-pane" role="tabpanel" aria-labelledby="anonymous-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Anonymous statistics</h2>
+                    
+                        <p>Data last retrieved Feb. 11, 2025, 5:56 p.m. UTC</p>
+                    
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <table id="anonymous-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="decimal-stats-tab-pane" role="tabpanel" aria-labelledby="decimal-stats-tab"
+         tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Decimal value statistics</h2>
+                    
+                        <p>
+                            <abbr title="More donations could have been made since!">Data last retrieved Feb. 11, 2025, 5:56 p.m. UTC</abbr>
+                        </p>
+                    
+                    <div style="max-width: 500px; margin: 0 auto">
+                        <table id="decimal-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="decimal-war-tab-pane" role="tabpanel" aria-labelledby="decimal-war-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Decimal war</h2>
+                    
+                        <p>Data last retrieved Feb. 11, 2025, 5:56 p.m. UTC</p>
+                    
+                    <p>
+                        <abbr title="This value may not be accurate as some donations are revoked after being made.">The total on Tiltify is currently: 13237.70.</abbr>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Overall</h3>
+                    <div style="max-width: 500px; margin-top: 50px">
+                        <table id="decimal-war-statistics"></table>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>During stream</h3>
+                    <div style="max-width: 500px; margin-top: 50px">
+                        <table id="decimal-war-stream-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="tab-pane fade" id="polls-tab-pane" role="tabpanel" aria-labelledby="polls-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Polls</h2>
+                    
+                    <table class="table" style="max-width: 2000px; margin: 0 auto;">
+                        <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th style="min-width: 190px">Created (UTC)</th>
+                            <th style="min-width: 120px">Total raised</th>
+                            <th style="min-width: 250px">Option</th>
+                            <th style="min-width: 120px">Raised</th>
+                            <th>Votes</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer fixed-bottom text-center bg-light">
+    Generated: Feb. 11, 2025, 5:56 p.m. UTC.
+    Developed by <a href="https://www.mikulaspoul.cz/" target="_blank">Miki</a>,
+    source on <a target="_blank" href="https://github.com/mikicz/p4a-portal">GitHub</a>.
+</footer>
+
+<script type="application/javascript">
+    let filters = {
+        availability: null,
+        virtual: null,
+        limited: null,
+    };
+
+    function getStr(key) {
+        if (filters[key] === true) return "true";
+        if (filters[key] === false) return "false";
+        return "all"
+    }
+
+    function updateButtons() {
+        $(".btn-availability .btn").removeClass("btn-primary").addClass("btn-secondary");
+        $(".btn-virtual .btn").removeClass("btn-primary").addClass("btn-secondary");
+        $(".btn-limited .btn").removeClass("btn-primary").addClass("btn-secondary");
+        $("#btn-availability-" + getStr("availability")).addClass("btn-primary").removeClass("btn-secondary");
+        $("#btn-virtual-" + getStr("virtual")).addClass("btn-primary").removeClass("btn-secondary");
+        $("#btn-limited-" + getStr("limited")).addClass("btn-primary").removeClass("btn-secondary");
+    }
+
+    function shouldShow(card) {
+        let show = true;
+        if (card.hasClass("card-active") && filters.availability === false) {
+            show = false;
+        }
+        if (card.hasClass("card-inactive") && filters.availability === true) {
+            show = false;
+        }
+        if (card.hasClass("card-limited") && filters.limited === false) {
+            show = false;
+        }
+        if (card.hasClass("card-unlimited") && filters.limited === true) {
+            show = false;
+        }
+
+        return show
+    }
+
+    function updateCards() {
+        let showing = 0;
+        $(".card").each(function () {
+            let card = $(this);
+            if (shouldShow(card)) {
+                card.slideDown();
+                showing += 1;
+            } else {
+                card.slideUp();
+            }
+        })
+        $("#btn-count").text("Showing " + showing)
+    }
+
+    function set(key, value) {
+        filters[key] = value;
+        updateButtons();
+        updateCards();
+    }
+
+    $(document).ready(function () {
+        $("#btn-reset-all").click(function () {
+            filters.availability = null;
+            filters.limited = null;
+            updateButtons();
+            updateCards();
+        });
+        $("#btn-availability-all").click(function () {
+            set("availability", null)
+        });
+        $("#btn-availability-true").click(function () {
+            set("availability", true)
+        });
+        $("#btn-availability-false").click(function () {
+            set("availability", false)
+        });
+        $("#btn-limited-all").click(function () {
+            set("limited", null)
+        });
+        $("#btn-limited-true").click(function () {
+            set("limited", true)
+        });
+        $("#btn-limited-false").click(function () {
+            set("limited", false)
+        });
+
+    })
+
+</script>
+
+</body>
+
+</html>
